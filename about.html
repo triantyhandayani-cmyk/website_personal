@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== GLOBAL ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fffcf4;
+            color: #3a3a3a;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #111827;
+            padding: 16px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #fbbf24;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 15px;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        /* ===== CV CONTAINER ===== */
+        .cv-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 60px auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            flex: 1;
+            background-color: #1f2937;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            min-width: 300px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fbbf24;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-title {
+            text-align: left;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fbbf24;
+            border-bottom: 2px solid #fbbf24;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .data-list {
+            text-align: left;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .data-list li {
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-bottom: 6px;
+        }
+
+        .data-list strong {
+            display: block;
+            color: #d1d5db;
+            font-size: 12px;
+        }
+
+        .data-list span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            flex: 2;
+            padding: 50px;
+        }
+
+        .header-title h2 {
+            font-size: 13px;
+            color: #6b7280;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .header-title h1 {
+            font-family: 'Lora', serif;
+            font-size: 40px;
+            color: #111827;
+            margin-bottom: 30px;
+        }
+
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .section-head {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .section-body {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .edu-item .school {
+            font-weight: 600;
+        }
+
+        .edu-item .year {
+            font-style: italic;
+            color: #6b7280;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: #e5e7eb;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* ========================= */
+        /* RESPONSIVE TABLET */
+        /* ========================= */
+        @media (max-width: 900px) {
+            .cv-container {
+                flex-direction: column;
+                margin: 30px 20px;
+            }
+
+            .sidebar {
+                min-width: 100%;
+            }
+
+            .main-content {
+                padding: 35px;
+            }
+        }
+
+        /* ========================= */
+        /* RESPONSIVE MOBILE */
+        /* ========================= */
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 20px;
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav a {
+                margin-left: 12px;
+                font-size: 14px;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .main-content {
+                padding: 25px 20px;
+            }
+
+            .header-title h1 {
+                font-size: 28px;
+            }
+
+            .section-body {
+                font-size: 14px;
+            }
+
+            .edu-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MyPortfolio</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="cv-container">
+
+    <div class="sidebar">
+        <img src="gambar/foto cv.jpeg" alt="Profile" class="profile-img">
+
+        <div class="sidebar-title">Data Pribadi</div>
+        <ul class="data-list">
+            <li><strong>Nama Lengkap</strong><span>Trianty Handayani Selan</span></li>
+            <li><strong>Tempat, Tanggal Lahir</strong><span>Tangerang, 18 Januari 2005</span></li>
+            <li><strong>Umur</strong><span>20 Tahun</span></li>
+            <li><strong>Jenis Kelamin</strong><span>Perempuan</span></li>
+            <li><strong>Domisili</strong><span>Kab. Tangerang</span></li>
+            <li><strong>Email</strong><span>triantyhandayani@gmail.com</span></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header-title">
+            <h2>Daftar Riwayat Hidup</h2>
+            <h1>Trianty Handayani Selan</h1>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-head">Tentang Saya</h3>
+            <div class="section-body">
+                Saya adalah mahasiswa yang memiliki minat besar dalam bidang teknologi,
+                khususnya pengembangan web, data mining, dan sistem berbasis IoT.
+                Saya terbiasa bekerja secara disiplin, mampu beradaptasi dengan cepat,
+                serta memiliki semangat belajar yang tinggi.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-head">Riwayat Pendidikan</h3>
+            <div class="section-body">
+                <div class="edu-item">
+                    <span class="school">Universitas Pamulang</span>
+                    <span class="year">2023 – Sekarang</span>
+                </div>
+                <div class="edu-item">
+                    <span class="school">SMKN 09 Kab. Tangerang</span>
+                    <span class="year">2020 – 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 My Portfolio
+</footer>
+
+</body>
+</html>

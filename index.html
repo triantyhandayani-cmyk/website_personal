@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= GLOBAL ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* ================= VIDEO BACKGROUND ================= */
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.75);
+            z-index: -1;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            color: #fbbf24;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            margin-left: 24px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #fbbf24;
+        }
+
+        /* ================= HAMBURGER ================= */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #fbbf24;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            text-align: center;
+            padding: 140px 20px 100px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 12px;
+        }
+
+        .hero span {
+            color: #fbbf24;
+        }
+
+        .hero p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+            color: #e5e7eb;
+        }
+
+        .hero button {
+            padding: 14px 30px;
+            background: #fbbf24;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #e5a50a;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #e5e7eb;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 5;
+            font-size: 14px;
+        }
+
+        /* ================= TABLET ================= */
+        @media (max-width: 900px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+
+        /* ================= MOBILE ================= */
+        @media (max-width: 480px) {
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 65px;
+                right: 20px;
+                background: rgba(17, 24, 39, 0.95);
+                flex-direction: column;
+                align-items: flex-start;
+                width: 200px;
+                padding: 15px;
+                border-radius: 12px;
+                display: none;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 120px 20px 90px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 13px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop playsinline id="myVideo" poster="gambar/fallback.jpg">
+        <source src="gambar/video_bckgrnd.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">MyPortfolio</div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav id="navMenu">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Hello, I'm <span>Trianty</span></h1>
+        <p>
+            "Coding with passion, designing with purpose.
+            Let's build something amazing together."
+        </p>
+        <button onclick="welcome()">Get Started</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>© 2025 My Portfolio</footer>
+
+    <!-- SCRIPT -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        function welcome() {
+            alert("Welcome to my portfolio!");
+            window.location.href = "about.html";
+        }
+    </script>
+
+</body>
+</html>

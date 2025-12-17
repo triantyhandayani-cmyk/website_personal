@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Project | Sistem Informasi Perpustakaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fffcf4;
+            color: #3a3a3a;
+        }
+
+        header {
+            background: #111827;
+            padding: 16px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fbbf24;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            margin-left: 24px;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 40px;
+        }
+
+        .project-title {
+            font-family: 'Lora', serif;
+            font-size: 40px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .project-subtitle {
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 14px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h3 {
+            font-size: 24px;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        ul {
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        .tech-list span {
+            display: inline-block;
+            background: #111827;
+            color: #fbbf24;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 6px 6px 0 0;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #111827;
+            font-weight: 600;
+            border-bottom: 2px solid #fbbf24;
+            padding-bottom: 4px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #fbbf24;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: #e5e7eb;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MyPortfolio</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h1 class="project-title">Sistem Informasi Perpustakaan</h1>
+    <p class="project-subtitle">
+        Website Manajemen Perpustakaan – SMKN 9 Kabupaten Tangerang
+    </p>
+
+    <img src="gambar/website.jpeg" alt="Sistem Informasi Perpustakaan" class="project-image">
+
+    <!-- Deskripsi -->
+    <div class="section">
+        <h3>📌 Deskripsi Project</h3>
+        <p>
+            Sistem Informasi Perpustakaan ini dibuat untuk membantu pengelolaan data buku, anggota,
+            dan transaksi peminjaman di SMKN 9 Kabupaten Tangerang. 
+            Website ini memiliki fitur login admin untuk memastikan keamanan data dan kemudahan dalam manajemen perpustakaan.
+        </p>
+    </div>
+
+    <!-- Tujuan -->
+    <div class="section">
+        <h3>🎯 Tujuan Pengembangan</h3>
+        <ul>
+            <li>Mempermudah pengelolaan data buku dan anggota</li>
+            <li>Mengurangi pencatatan manual</li>
+            <li>Meningkatkan efisiensi pelayanan perpustakaan</li>
+            <li>Menyediakan laporan peminjaman secara cepat dan akurat</li>
+        </ul>
+    </div>
+
+    <!-- Fitur -->
+    <div class="section">
+        <h3>⚙️ Fitur Utama</h3>
+        <ul>
+            <li>Login & Logout Admin</li>
+            <li>Manajemen Data Buku</li>
+            <li>Manajemen Data Anggota</li>
+            <li>Transaksi Peminjaman & Pengembalian</li>
+            <li>Laporan Data Perpustakaan</li>
+        </ul>
+    </div>
+
+    <!-- Teknologi -->
+    <div class="section">
+        <h3>🛠️ Teknologi yang Digunakan</h3>
+        <div class="tech-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+        </div>
+    </div>
+
+    <a href="portfolio.html" class="back-btn">← Kembali ke Portfolio</a>
+
+</div>
+
+<footer>
+    <p>© 2025 My Portfolio</p>
+</footer>
+
+</body>
+</html>
